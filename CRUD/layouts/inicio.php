@@ -6,7 +6,7 @@
 <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title>
-    Bravo Ticket
+    Restaurante
   </title>
   <!--     Notificação     -->
   <link href="../assets/css/mensagem.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0" href="../pages/dashboard.php">
           <img src="../assets/img/logobravo.png" class="navbar-brand-img h-150" alt="main_logo">
-          <span class="ms-1 font-weight-bold">Bravo Ticket</span>
+          <span class="ms-1 font-weight-bold">Restaurante</span>
         </a>
       </div>
       <hr class="horizontal dark mt-0">
@@ -50,6 +50,16 @@
               </div>
               <span class="nav-link-text ms-1">Produtos</span>
             </a>
+            <ul>
+              <li class="nav-item">
+                <a id="nevega4" class="nav-link" href="../pages/listar_categoria.php">
+                  <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                    <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
+                  </div>
+                  <span class="nav-link-text ms-1">Categorias</span>
+                </a>
+              </li>
+            </ul>
           </li>
           <li class="nav-item">
             <a id="nevega3" class="nav-link" href="../pages/listar_admin.php">
@@ -57,14 +67,6 @@
                 <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
               </div>
               <span class="nav-link-text ms-1">Administradores</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a id="nevega4" class="nav-link" href="../pages/listar_categoria.php">
-              <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
-              </div>
-              <span class="nav-link-text ms-1">Categoria</span>
             </a>
           </li>
         </ul>
