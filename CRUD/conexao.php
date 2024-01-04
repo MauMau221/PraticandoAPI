@@ -2,7 +2,7 @@
 
     //Configurações do banco de dados
 
-    $host = '127.0.0.1';  //Alterar aqui o servidor do banco de dados
+    $host = 'localhost';  //Alterar aqui o servidor do banco de dados
     $db = 'restaurante';  // Nome do banco a ser usado 
     $user = 'root';  //Usuario do banco de dados
     $pass = '';  //Senha do banco de dados 

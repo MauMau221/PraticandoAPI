@@ -10,7 +10,9 @@ require_once('../conexao.php');
 // Trazer apenas a quantidade de produtos que estão com categoria e produto estoque  
 try {
   $stmt_contagem_pd = $pdo->prepare("SELECT COUNT(1) AS total
-    FROM PRODUTO
+    FROM PRODUTO AS p
+    INNER JOIN CATEGORIA AS c ON c.CATEGORIA_ID = p.CATEGORIA_ID
+    INNER JOIN PRODUTO_ESTOQUE as pe ON pe.PRODUTO_ID = p.PRODUTO_ID
   ");
   $stmt_contagem_pd->execute();
   $resultado_pd = $stmt_contagem_pd->fetch(PDO::FETCH_ASSOC);
@@ -85,7 +87,7 @@ try {
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-uppercase font-weight-bold">Produtos cadastrados</p>
+                <p class="text-sm mb-0 text-uppercase font-weight-bold">Total Produtos</p>
                 <h5 class="font-weight-bolder">
                   <?php echo $contagem_produtos;?>
                 </h5>
@@ -106,7 +108,7 @@ try {
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-uppercase font-weight-bold">Administradores cadastrados</p>
+                <p class="text-sm mb-0 text-uppercase font-weight-bold">Total Administradores</p>
                 <h5 class="font-weight-bolder">
                   <?php echo $contagem_adms; ?>
                 </h5>
@@ -127,7 +129,7 @@ try {
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-uppercase font-weight-bold">Categorias cadastradas</p>
+                <p class="text-sm mb-0 text-uppercase font-weight-bold">Total Categorias</p>
                 <h5 class="font-weight-bolder">
                   <?php echo $contagem_ctgs; ?>
                 </h5>
