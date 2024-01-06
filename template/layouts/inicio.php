@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-	<title>About</title>
+	<title>Ticket Bravo</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -55,10 +55,6 @@
 
 							<li class="label1" data-label1="hot">
 								<a href="shoping-cart.php">Features</a>
-							</li>
-
-							<li>
-								<a href="blog.php">Blog</a>
 							</li>
 
 							<li>
