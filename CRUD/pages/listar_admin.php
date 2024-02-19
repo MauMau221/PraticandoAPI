@@ -165,15 +165,6 @@ if (isset($_GET['busca'])){
               </thead>
 
               <tbody>
-                  <?php if(isset($_GET['busca'])){
-                    $administrador = $resultado_busca;
-                  } ?>
-                    <?php if(isset($_GET['ativo'])){
-                      $administrador = $administrador_ativo;
-                    } ?>
-                  <?php if(isset($_GET['inativo'])){
-                    $administrador = $administrador_inativo;
-                  } ?>
                 <?php foreach ($administrador as $adms) { ?>
                   <tr>
                     <td class="d-none">
@@ -189,7 +180,7 @@ if (isset($_GET['busca'])){
                       <?php
                       if ($adms['ADM_ATIVO'] == 0) {
                         echo '<span class="statusUser badge badge-sm bg-gradient-secondary">Inativo</span>';
-                      } else {
+                      }else  {
                         echo '<span class="statusUser badge badge-sm bg-gradient-success">Ativo</span>';
                       };
                       ?>
