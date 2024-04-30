@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->float('numum');
             $table->float('numdois');
+            $table->float('resultado')->nullable();
+            $table->string('operacao')->nullable();
             $table->timestamps();
         });
     }

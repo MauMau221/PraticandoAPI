@@ -3,47 +3,85 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\calculo;
+use App\Models\Calculo;
 use Illuminate\Http\Request;
 
 class CalculoController extends Controller
 {
 
-    protected $calcular;
+    public function adicao(Request $request)
+    {
+        $um = $request->input('numum');
+        $dois = $request->input('numdois');
 
-    public function __construct(calculo $calcular){
-        $this->calcular = $calcular;
+        $resultado = $um + $dois ;
+
+        $calculo = new Calculo();
+
+        $calculo->numum = $um;
+        $calculo->numdois = $dois ;
+        $calculo->operacao = 'somar';
+        $calculo->resultado =  $resultado;
+
+        $calculo->save();
+
+        return response(['Resultado' => $resultado]);
     }
 
-    public function adicao(Request $req){
-        $um = $req->input('numum');
-        $dois = $req->input('numdois');
-    $resultado = $this->calcular->somar($um, $dois);
+    public function subtracao(Request $request)
+    {
+        $um = $request->input('numum');
+        $dois = $request->input('numdois');
 
-    return response(['Resultado' => $resultado]);
+        $resultado = $um - $dois ;
+
+        $calculo = new Calculo();
+
+        $calculo->numum = $um;
+        $calculo->numdois = $dois ;
+        $calculo->operacao = 'subtrair';
+        $calculo->resultado =  $resultado;
+
+        $calculo->save();
+
+        return response(['Resultado' => $resultado]);
     }
 
-    public function subtracao(Request $req){
-        $um = $req->input('numum');
-        $dois = $req->input('numdois');
-    $resultado = $this->calcular->subtrair($um, $dois);
+    public function divisao(Request $request)
+    {
+        $um = $request->input('numum');
+        $dois = $request->input('numdois');
 
-    return response(['Resultado' => $resultado]);
+        $resultado = $um / $dois ;
+
+        $calculo = new Calculo();
+
+        $calculo->numum = $um;
+        $calculo->numdois = $dois ;
+        $calculo->operacao = 'divisao';
+        $calculo->resultado =  $resultado;
+
+        $calculo->save();
+
+        return response(['Resultado' => $resultado]);
     }
 
-    public function divisao(Request $req){
-        $um = $req->input('numum');
-        $dois = $req->input('numdois');
-    $resultado = $this->calcular->dividir($um, $dois);
+    public function multiplicacao(Request $request)
+    {
+        $um = $request->input('numum');
+        $dois = $request->input('numdois');
 
-    return response(['Resultado' => $resultado]);
-    }
+        $resultado = $um * $dois ;
 
-    public function multiplicacao(Request $req){
-        $um = $req->input('numum');
-        $dois = $req->input('numdois');
-    $resultado =  $this->calcular->multiplicar($um, $dois);
+        $calculo = new Calculo();
 
-    return response(['Resultado' => $resultado]);
+        $calculo->numum = $um;
+        $calculo->numdois = $dois ;
+        $calculo->operacao = 'multiplicacao';
+        $calculo->resultado =  $resultado;
+
+        $calculo->save();
+
+        return response(['Resultado' => $resultado]);
     }
 }
