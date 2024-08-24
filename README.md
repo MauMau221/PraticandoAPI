@@ -8,11 +8,4 @@ PASTAS
 
   -- API externa -- 
     A ideia dessa pasta é conter codigos onde peguei uma API publica e fiz o consumo.
-    
 
-
-      SUBPASTAS
-      
-        -- API/LARAVEL -- Minha aplicação em laravel que serve uma API.
-        -- SITE --  Compõem um site separado que já consegue fazer o consumo dessa API fornecida na minha aplicação.
-    
